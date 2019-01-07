@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>链表</title>
+      <link href="/2019/01/07/%E9%93%BE%E8%A1%A8/"/>
+      <url>/2019/01/07/%E9%93%BE%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数组</title>
+      <link href="/2019/01/07/%E6%95%B0%E7%BB%84/"/>
+      <url>/2019/01/07/%E6%95%B0%E7%BB%84/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>快速排序</title>
       <link href="/2019/01/07/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"/>
       <url>/2019/01/07/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</url>
@@ -64,7 +102,7 @@
       
         <tags>
             
-            <tag> 排序 </tag>
+            <tag> sort </tag>
             
         </tags>
       
