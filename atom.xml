@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-07T11:47:42.082Z</updated>
+  <updated>2019-01-08T09:01:03.312Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://yoursite.com/2019/01/07/%E9%93%BE%E8%A1%A8/"/>
     <id>http://yoursite.com/2019/01/07/链表/</id>
     <published>2019-01-07T09:29:41.000Z</published>
-    <updated>2019-01-07T11:47:42.082Z</updated>
+    <updated>2019-01-08T09:01:03.312Z</updated>
     
-    <content type="html"><![CDATA[<p>链表</p><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<p>链表初探</p><a id="more"></a><h5 id="链表的存储结构"><a href="#链表的存储结构" class="headerlink" title="链表的存储结构"></a>链表的存储结构</h5>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;链表&lt;/p&gt;
+      &lt;p&gt;链表初探&lt;/p&gt;
     
     </summary>
     
