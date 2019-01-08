@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 算法~哈
+title: 哈哈哈~
 subtitle: 看看是啥
 description:
 keywords:
@@ -78,8 +78,6 @@ theme: material-x
 
 # 社交信息
 social:
-  - icon: fas fa-envelope
-    url: wwdan.com
   - icon: fab fa-github
     url: https://github.com/wz1992
 
@@ -88,15 +86,15 @@ nav_menu:
   - name: 文章
     #icon: fas fa-home
     url: /
-  - name: 分类
+  - name: 留言板
     #icon: fas fa-rss
-    url: categories/
+    url: guestbook/
   - name: 归档
     #icon: fas fa-archive
     url: archives/
   - name: 关于我
     #icon: fas fa-users
-    url: wwdan.com
+    url: about/
 
 # 侧边栏
 widgets:
@@ -117,12 +115,41 @@ widgets:
     icon: fas fa-link
     title: 特别链接
     rows:
-      - name: 关于我 / 留言板
+      - name: 关于我
         icon: fas fa-comment-dots
-        url: wwdan.com
+        url: about/
   - widget: toc
   
 deploy:
   type: git
   repo: https://github.com/wz1992/wz1992.github.io
   branch: master
+  
+share:
+  - id: qq
+    name: QQ好友
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png
+  - id: qzone
+    name: QQ空间
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png
+  - id: qrcode
+    name: 微信
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png
+  - id: weibo
+    name: 微博
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png
+  - id: qrcode
+    name: QRcode
+    img: https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png
+# valine
+valine:
+  enable: true # 如果你想用Valine评论系统，请设置enable为true
+  app_id: ikSSc4rIVDBXA5TaxPN92RDe-gzGzoHsz
+  app_key: 2ilmA5L5AVPS6ntUqHJW53JL
+  guest_info: nick,mail,link #valine comment header info
+  placeholder: 快来评论吧~ # valine comment input placeholder(like: Please leave your footprints )
+  avatar: mp # gravatar style https://valine.js.org/avatar
+  pageSize: 10 # comment list page size
+  verify: false # valine verify code (true/false)
+  notify: false # valine mail notify (true/false)
+  lang: zh-cn
