@@ -193,16 +193,18 @@
 
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
-        <p>三大简单排序：冒泡排序、插入排序、选择排序</p>
+        <p>三大简单排序：冒泡排序、插入排序、选择排序  平均时间复杂度均为O(n*n)</p>
 <a id="more"></a>
 <h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BubbleSort</span> </span>&#123;</span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++) &#123;</span><br><span class="line">            Boolean flag = <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;nums.length-i-<span class="number">1</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[j] &gt; nums[j+<span class="number">1</span>]) &#123;</span><br><span class="line">                    swap(nums, j, j+<span class="number">1</span>);</span><br><span class="line">                    flag = <span class="keyword">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(flag) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = nums[i];</span><br><span class="line">        nums[i] = nums[j];</span><br><span class="line">        nums[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertSort</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;nums.length; i++) &#123;</span><br><span class="line">           <span class="keyword">int</span> value = nums[i];</span><br><span class="line">           <span class="keyword">int</span> j=i-<span class="number">1</span>;</span><br><span class="line">           <span class="keyword">for</span>(; j&gt;=<span class="number">0</span>; j--) &#123;</span><br><span class="line">               <span class="keyword">if</span>(nums[j] &gt; value) &#123;</span><br><span class="line">                   nums[j+<span class="number">1</span>] = nums[j];</span><br><span class="line">               &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                   <span class="keyword">break</span>;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">           nums[j+<span class="number">1</span>] = value;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">selectSort</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.length; i++) &#123;</span><br><span class="line">         <span class="keyword">int</span> min = i;</span><br><span class="line">         <span class="keyword">for</span>(<span class="keyword">int</span> j=i; j&lt;nums.length; j++) &#123;</span><br><span class="line">             <span class="keyword">if</span>(nums[min] &gt; nums[j]) &#123;</span><br><span class="line">                 min = j;</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">         swap(nums, i, min);</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
       </div>
         
           <section class="meta" id="footer-meta">
             
-              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-07T17:55:19+08:00" content="2019-01-07"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>
-                &nbsp;2019-01-07
+              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-08T11:25:26+08:00" content="2019-01-08"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>
+                &nbsp;2019-01-08
               </time>
             
             
@@ -365,7 +367,7 @@
 </header>
 
     <div class="content pure">
-      <a href="/tags/sort/" style="font-size: 14px; color: #999">sort</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a>
+      <a href="/tags/sort/" style="font-size: 14px; color: #999">sort</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/链表/" style="font-size: 14px; color: #999">链表</a>
     </div>
   </section>
 
@@ -389,7 +391,9 @@
         
           <li><a class="flat-box" title="/categories/排序/" href="/categories/排序/"><div class="name">排序</div><div class="badge">(3)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/数据结构/" href="/categories/数据结构/"><div class="name">数据结构</div><div class="badge">(1)</div></a></li>
+          <li><a class="flat-box" title="/categories/数据结构/" href="/categories/数据结构/"><div class="name">数据结构</div><div class="badge">(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/数据结构/链表/" href="/categories/数据结构/链表/"><div class="name">链表</div><div class="badge">(1)</div></a></li>
         
       </ul>
     </div>
@@ -443,7 +447,7 @@
 </header>
 
     <div class="content pure">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#冒泡排序"><span class="toc-text">冒泡排序</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#冒泡排序"><span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#插入排序"><span class="toc-text">插入排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#选择排序"><span class="toc-text">选择排序</span></a></li></ol>
     </div>
   </section>
 
@@ -475,8 +479,6 @@
   <br>
   <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
-  <div>Use <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a> as theme, total visits <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> times. 
-  </div>
 </footer>
     <script>setLoadingBarProgress(80);</script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
