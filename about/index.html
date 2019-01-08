@@ -205,6 +205,28 @@
 
 
 
+  <article class="post white-box comments">
+    <section class="article typo">
+
+      
+
+      
+        <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;Comments</h4>
+        
+        
+        
+          
+            <section id="comments">
+              <div id="valine_container" class="valine_thread">
+                <i class="fas fa-spinner fa-spin fa-fw"></i>
+              </div>
+            </section>
+          
+        
+      
+    </section>
+  </article>
+
 
 
 <script>
@@ -241,10 +263,6 @@
     
     
       <div class="social-wrapper">
-        
-          
-            <a href="/wwdan.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
-          
         
           
             <a href="https://github.com/wz1992" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
@@ -375,10 +393,6 @@
     <div class="social-wrapper">
       
         
-          <a href="/wwdan.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
-        
-      
-        
           <a href="https://github.com/wz1992" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
         
       
@@ -441,6 +455,44 @@
 
   
   
+  
+    
+      
+      
+      
+        
+          <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+          
+            
+              <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1/js/volantis.min.js"></script>
+            
+          
+          <script>
+          var GUEST_INFO = ['nick','mail','link'];
+          var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+          });
+          var notify = 'false' == true;
+          var verify = 'false' == true;
+          var valine = new Valine();
+          valine.init({
+            el: '#valine_container',
+            notify: notify,
+            verify: verify,
+            guest_info: guest_info,
+            
+            appId: "ikSSc4rIVDBXA5TaxPN92RDe-gzGzoHsz",
+            appKey: "2ilmA5L5AVPS6ntUqHJW53JL",
+            placeholder: "快来评论吧~",
+            pageSize:'10',
+            avatar:'mp',
+            lang:'zh-cn',
+            highlight:''
+          })
+          </script>
+        
+      
+    
   
   
     <script src="/js/app.js"></script>
