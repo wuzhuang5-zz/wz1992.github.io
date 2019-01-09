@@ -90,7 +90,7 @@
 			
 				<div class="m_search">
 					<form name="searchform" class="form u-search-form">
-						<input type="text" class="input u-search-input" placeholder="Search">
+						<input type="text" class="input u-search-input" placeholder="搜索">
 						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
 					</form>
 				</div>
@@ -195,13 +195,36 @@
       <div class="article-entry" itemprop="articleBody">
         <p>链表初探</p>
 <a id="more"></a>
-<h5 id="链表的存储结构"><a href="#链表的存储结构" class="headerlink" title="链表的存储结构"></a>链表的存储结构</h5>
+<h5 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h5><img src="/2019/01/07/链表/list.jpg">
+<p>链表通过指针将一组零散的内存块串联在一起。其中，内存块称为链表的结点。为了将所有的结点串联起来，每个链表的结点除了存储数据之外，还需要记录链上的下一个结点的地址。</p>
+<img src="/2019/01/07/链表/list2.jpg">
+<p>我们习惯把第一个结点叫做头结点，把最后一个结点叫做尾结点。其中，头结点用来记录链表的基地址。有了它，我们就可以遍历得到整条链表。而尾结点特殊的地方是：指针不是指向下一个结点，而是指向一个空地址NULL，表示这是链表上最后一个结点。</p>
+<img src="/2019/01/07/链表/list3.jpg">
+<p>但是，链表要随机访问第K个元素，就没有数组那么高效了。链表需要根据指针一个结点一个结点地依次遍历按，直到找到相应的结点，时间复杂度为O(n)。</p>
+<h5 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h5><p>循环链表和单链表的区别在尾结点，其尾结点的指针是指向链表的头结点。</p>
+<img src="/2019/01/07/链表/list4.jpg">
+<h5 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h5><p>双向链表每个结点有一个指向前面结点的指针prev和指向后面结点的指针next。</p>
+<img src="/2019/01/07/链表/list5.jpg">
+<p>从结构上看，双向链表可以支持O(1)时间复杂度的情况下找到前驱结点，正是这样的特点，也使双向链表在某些情况下的插入、删除等操作比单链表简单、高效。<br>链表删除无外乎两种情况：</p>
+<ul>
+<li>删除结点种值等于某个给定值的结点</li>
+<li>删除给定指针指向的结点<br>对于第一种情况，需要遍历链表找到和给定值相等的结点，时间复杂度是O(n)<br>对于第二种情况，已经知道给定结点的指针，删除需要知道前指针prev，单链表需要遍历，而双向链表不需要。<br>同理，插入也是一样。</li>
+</ul>
+<h5 id="常见链表问题"><a href="#常见链表问题" class="headerlink" title="常见链表问题"></a>常见链表问题</h5><ul>
+<li>单链表反转</li>
+<li>链表中环的检测</li>
+<li>两个有序链表合并</li>
+<li>删除链表倒数第n个结点</li>
+<li>求链表的中间结点</li>
+</ul>
+<p>对应leetcode中的题号依次为：206、141、21、19、876</p>
+
       </div>
         
           <section class="meta" id="footer-meta">
             
-              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-08T17:01:03+08:00" content="2019-01-08"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>
-                &nbsp;2019-01-08
+              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-09T11:03:34+08:00" content="2019-01-09"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>
+                &nbsp;2019-01-09
               </time>
             
             
@@ -265,10 +288,29 @@
         
             <div class="prev-next">
                 
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/2019/01/08/数据库原理/" rel="prev" title="数据库原理">
+                                  
+                                      数据库原理
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/数据库/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>数据库</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
                 
                     <section class="next">
                         <span class="art-item-right" aria-hidden="true">
-                            <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                             <h4>
                                 <a href="/2019/01/07/数组/" rel="prev" title="数组">
                                     
@@ -308,16 +350,16 @@
         
 
     <div class="recommended_posts">
-        <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;Related Posts</h4>
+        <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;相关文章</h4>
         <ul>
+            
+                <li><a href="http://yoursite.com/2019/01/08/数据库原理/">数据库原理</a></li>
             
                 <li><a href="http://yoursite.com/2019/01/07/数组/">数组</a></li>
             
                 <li><a href="http://yoursite.com/2019/01/07/快速排序/">快速排序</a></li>
             
                 <li><a href="http://yoursite.com/2019/01/07/归并排序/">归并排序</a></li>
-            
-                <li><a href="http://yoursite.com/2019/01/06/三大简单排序/">三大简单排序</a></li>
             
         </ul>
     </div>
@@ -326,7 +368,7 @@
       
 
       
-        <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;Comments</h4>
+        <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
         
         
         
@@ -418,12 +460,12 @@
   <section class="tagcloud">
     
 <header class="pure">
-  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Hot Tags</div>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
   
 </header>
 
     <div class="content pure">
-      <a href="/tags/sort/" style="font-size: 14px; color: #999">sort</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/链表/" style="font-size: 14px; color: #999">链表</a>
+      <a href="/tags/sort/" style="font-size: 14px; color: #999">sort</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/数据库/" style="font-size: 14px; color: #999">数据库</a> <a href="/tags/数据结构/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/链表/" style="font-size: 14px; color: #999">链表</a>
     </div>
   </section>
 
@@ -438,14 +480,18 @@
   <section class="category">
     
 <header class="pure">
-  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Categories</div>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
   
 </header>
 
     <div class="content pure">
       <ul class="entry">
         
+          <li><a class="flat-box" title="/categories/数据库/mysql/" href="/categories/数据库/mysql/"><div class="name">mysql</div><div class="badge">(1)</div></a></li>
+        
           <li><a class="flat-box" title="/categories/排序/" href="/categories/排序/"><div class="name">排序</div><div class="badge">(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/数据库/" href="/categories/数据库/"><div class="name">数据库</div><div class="badge">(1)</div></a></li>
         
           <li><a class="flat-box" title="/categories/数据结构/" href="/categories/数据结构/"><div class="name">数据结构</div><div class="badge">(2)</div></a></li>
         
@@ -496,14 +542,14 @@
   <section class="toc-wrapper">
     
 <header class="pure">
-  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Table of Contents</div>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章目录</div>
   
     <div class="wrapper"><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
   
 </header>
 
     <div class="content pure">
-      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#链表的存储结构"><span class="toc-text">链表的存储结构</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#单链表"><span class="toc-text">单链表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#循环链表"><span class="toc-text">循环链表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#双向链表"><span class="toc-text">双向链表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#常见链表问题"><span class="toc-text">常见链表问题</span></a></li></ol>
     </div>
   </section>
 
@@ -529,7 +575,7 @@
     </div>
   
   <br>
-  <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
 </footer>
     <script>setLoadingBarProgress(80);</script>
