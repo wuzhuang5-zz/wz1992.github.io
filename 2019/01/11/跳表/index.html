@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Tag: 链表 | JohnWu&#39;Blog</title>
+  <title>跳表 | JohnWu&#39;Blog</title>
   
   
 
@@ -151,57 +151,20 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            
-    <script>
-        window.subData= { title:'Hot Tags : 链表'}
-    </script>
-
-
-<section class="post-list">
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-        <div class="post-wrapper">
-          <article class="post reveal ">
-    
+            <article id="post" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
+  
 <section class="meta">
   
   <div class="meta" id="header-meta">
     
-      <h2 class="title">
-          <a href="/2019/01/07/链表/">
-              
-                  链表
-              
-          </a>
-      </h2>
+      
+          <h1 class="title">跳表</h1>
+      
     
 
     
       <time class="metatag time">
-        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-07
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019-01-11
       </time>
     
 
@@ -209,12 +172,18 @@
       
     
     <div class="metatag cats">
-        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;<a class="categories" href="/categories/链表/">链表</a>
+        <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;<a class="categories" href="/categories/跳表/">跳表</a>
     </div>
 
 
     
 
+    
+      
+        <div class="metatag browse busuanzi"><i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+          &nbsp;<span id="busuanzi_value_page_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+        </div>
+      
     
 
     
@@ -223,36 +192,173 @@
 </section>
 
     <section class="article typo">
-        <p>链表初探</p>
+      <div class="article-entry" itemprop="articleBody">
+        <p>基于单链表实现的二分法时间复杂度仅为O(logn)</p>
+<a id="more"></a>
+
+      </div>
         
-            <div class="readmore">
-                <a href="/2019/01/07/链表/" class="flat-box">
-                    <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-                    Read More
-                </a>
-            </div>
+          <section class="meta" id="footer-meta">
+            
+              <time class="metatag time" itemprop="dateUpdated" datetime="2019-01-11T10:52:09+08:00" content="2019-01-11"><i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>
+                &nbsp;2019-01-11
+              </time>
+            
+            
+                
+                <div class="metatag tags"><a class="tag" href="/tags/数据结构/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;数据结构</a></div>
+            
+            
+              
+  <div class="metatag share -mob-share-list">
+    <i class="left fas fa-share-alt fa-fw" aria-hidden="true"></i>
+    <div class="-mob-share-list share-body">
+      
+        
+          <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/11/跳表/&title=跳表 | JohnWu'Blog&summary=基于单链表实现的二分法时间复杂度仅为O(logn)">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+            
+          </a>
+        
+      
+        
+          <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2019/01/11/跳表/&title=跳表 | JohnWu'Blog&summary=基于单链表实现的二分法时间复杂度仅为O(logn)">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+            
+          </a>
+        
+      
+        
+          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aO3LDMAxFUe9/00qTIkXE3AdImSF4WXlsfXhcYAACnw9e14919w25fn3v+pkPLBkyZGzLuJbr7pr0xfzJ5Ndf3ihDhowDGHcv5p/JryT4pk+QIUOGDLJd8pz1djt/hAwZMmSkn9NveOkrQ4YMGaSY5Gdc/WTxxVpchgwZGzL4qfv/f36lvyFDhoytGFe40nSNJ4u1/XzfK0OGjNEMHuD48f36acUCFexHhgwZsxlplvVsVkbaD68kizJkyNiQkaaDKbXf5kRhXYYMGeMYaRhNi1XetoyTP3KpDBkyRjB4M6B/WJYOVXSGxmTIkDGPwUe1nhrIIH8WuTeI0DJkyBjB6H/z7NbTK2XIkDGVkR6o8cSRF7FpS+B2ZkSGDBkHMOJUrLSJWhvgj73JkCFjNCNtA5Ara88hQfaxMQsZMmRszqgVmemhW9rIRJ0NGTJkDGXw4/5OAE1DZ/ynyJAhYzSDF6W1TIwnfE8FbhkyZMxm8HK0P+1QK2LRfmTIkDGUkRaQPGjyQpQ3Em53LkOGjAMY/SEJ3iogBXDawJAhQ8YJjFrQ7JS+5JkyZMiQcYWLl5QkjKb3FluYMmTI2JzBF9l057i/OCciQ4aMYxg8yNbuSgfCiumjDBkyDmD0A1/akoxnQNYYGTJkyAiDb7ENGY5uyJAhQ0ZnSIIclvUHzlozIzJkyNiQwctRHoLToY1a2SxDhowTGJ3SEYVCnCZ2grgMGTKGMr4AYb9Lqfn8v0YAAAAASUVORK5CYII=">
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+          
+          </a>
+        
+      
+        
+          <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/11/跳表/&title=跳表 | JohnWu'Blog&summary=基于单链表实现的二分法时间复杂度仅为O(logn)">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+            
+          </a>
+        
+      
+        
+          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aO3LDMAxFUe9/00qTIkXE3AdImSF4WXlsfXhcYAACnw9e14919w25fn3v+pkPLBkyZGzLuJbr7pr0xfzJ5Ndf3ihDhowDGHcv5p/JryT4pk+QIUOGDLJd8pz1djt/hAwZMmSkn9NveOkrQ4YMGaSY5Gdc/WTxxVpchgwZGzL4qfv/f36lvyFDhoytGFe40nSNJ4u1/XzfK0OGjNEMHuD48f36acUCFexHhgwZsxlplvVsVkbaD68kizJkyNiQkaaDKbXf5kRhXYYMGeMYaRhNi1XetoyTP3KpDBkyRjB4M6B/WJYOVXSGxmTIkDGPwUe1nhrIIH8WuTeI0DJkyBjB6H/z7NbTK2XIkDGVkR6o8cSRF7FpS+B2ZkSGDBkHMOJUrLSJWhvgj73JkCFjNCNtA5Ara88hQfaxMQsZMmRszqgVmemhW9rIRJ0NGTJkDGXw4/5OAE1DZ/ynyJAhYzSDF6W1TIwnfE8FbhkyZMxm8HK0P+1QK2LRfmTIkDGUkRaQPGjyQpQ3Em53LkOGjAMY/SEJ3iogBXDawJAhQ8YJjFrQ7JS+5JkyZMiQcYWLl5QkjKb3FluYMmTI2JzBF9l057i/OCciQ4aMYxg8yNbuSgfCiumjDBkyDmD0A1/akoxnQNYYGTJkyAiDb7ENGY5uyJAhQ0ZnSIIclvUHzlozIzJkyNiQwctRHoLToY1a2SxDhowTGJ3SEYVCnCZ2grgMGTKGMr4AYb9Lqfn8v0YAAAAASUVORK5CYII=">
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+          
+          </a>
+        
+      
+    </div>
+  </div>
+
+
+            
+          </section>
         
 
         
-            <div class="full-width auto-padding tags">
+            <div class="prev-next">
                 
-                    <a href="/tags/链表/"><i class="fas fa-hashtag fa-fw"></i>链表</a>
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous</h6>
+                            <h4>
+                                <a href="/2019/01/11/二分法/" rel="prev" title="二分法">
+                                  
+                                      二分法
+                                  
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/01/09/队列/" rel="prev" title="队列">
+                                    
+                                        队列
+                                    
+                                </a>
+                            </h4>
+                            
+                        </span>
+                    </section>
                 
             </div>
         
+
     </section>
+
 </article>
 
-        </div>
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+
       
-    
-</section>
+        
+
+    <div class="recommended_posts">
+        <h4><i class="fas fa-bookmark fa-fw" aria-hidden="true"></i>&nbsp;Related Posts</h4>
+        <ul>
+            
+                <li><a href="http://yoursite.com/2019/01/11/二分法/">二分法</a></li>
+            
+                <li><a href="http://yoursite.com/2019/01/09/队列/">队列</a></li>
+            
+                <li><a href="http://yoursite.com/2019/01/09/栈/">栈</a></li>
+            
+                <li><a href="http://yoursite.com/2019/01/08/数据库原理/">数据库原理</a></li>
+            
+        </ul>
+    </div>
+
+
+      
+
+      
+        <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;Comments</h4>
+        
+        
+        
+          
+            <section id="comments">
+              <div id="valine_container" class="valine_thread">
+                <i class="fas fa-spinner fa-spin fa-fw"></i>
+              </div>
+            </section>
+          
+        
+      
+    </section>
+  </article>
 
 
 
-<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-
-
+<script>
+    window.subData = {
+        title: '跳表',
+        tools: true
+    }
+</script>
 
 
         </div>
@@ -479,6 +585,42 @@
   
   
   
+    
+      
+      
+      
+        
+          <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+          
+            
+              <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1/js/volantis.min.js"></script>
+            
+          
+          <script>
+          var GUEST_INFO = ['nick','mail','link'];
+          var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+          });
+          var notify = 'false' == true;
+          var verify = 'false' == true;
+          var valine = new Valine();
+          valine.init({
+            el: '#valine_container',
+            notify: notify,
+            verify: verify,
+            guest_info: guest_info,
+            
+            appId: "ikSSc4rIVDBXA5TaxPN92RDe-gzGzoHsz",
+            appKey: "2ilmA5L5AVPS6ntUqHJW53JL",
+            placeholder: "快来评论吧~",
+            pageSize:'10',
+            avatar:'mp',
+            lang:'zh-cn',
+            highlight:''
+          })
+          </script>
+        
+      
     
   
   
