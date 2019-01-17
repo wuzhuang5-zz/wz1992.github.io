@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-11T09:01:39.719Z</updated>
+  <updated>2019-01-17T02:49:52.561Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>two_sum</title>
+    <link href="http://yoursite.com/2019/01/17/two-sum/"/>
+    <id>http://yoursite.com/2019/01/17/two-sum/</id>
+    <published>2019-01-17T02:20:29.000Z</published>
+    <updated>2019-01-17T02:49:52.561Z</updated>
+    
+    <content type="html"><![CDATA[<p>Question:<br>Given an array of integers, find two numbers such that they add up to a specific target<br>number.<br>The function twoSum should return indices of the two numbers such that they add up to<br>the target, where index1 must be less than index2. Please note that your returned answers<br>(both index1 and index2) are not zero-based.You may assume that each input would have exactly one solution.</p><p>O(n) runtime, O(n) space – Hash table: </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] numbers, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;numbers.length-<span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> x = numbers[i];</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(target - x)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(target-x) + <span class="number">1</span>, i + <span class="number">1</span>&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(x, i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No two sum solution"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Question:&lt;br&gt;Given an array of integers, find two numbers such that they add up to a specific target&lt;br&gt;number.&lt;br&gt;The function twoSum sh
+      
+    
+    </summary>
+    
+      <category term="Array/String" scheme="http://yoursite.com/categories/Array-String/"/>
+    
+    
+      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>B+树</title>
+    <link href="http://yoursite.com/2019/01/16/B+%E6%A0%91/"/>
+    <id>http://yoursite.com/2019/01/16/B+树/</id>
+    <published>2019-01-16T02:01:28.000Z</published>
+    <updated>2019-01-16T02:01:28.406Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>贪心算法</title>
+    <link href="http://yoursite.com/2019/01/15/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/01/15/贪心算法/</id>
+    <published>2019-01-15T11:30:25.000Z</published>
+    <updated>2019-01-15T11:33:44.185Z</updated>
+    
+    <content type="html"><![CDATA[<p>贪心算法有很多经典的应用，比如霍夫曼编码、Prim和Kruskal最小生成树算法、Dijkstra单源最短路径算法。</p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;贪心算法有很多经典的应用，比如霍夫曼编码、Prim和Kruskal最小生成树算法、Dijkstra单源最短路径算法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="算法思想" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3/"/>
+    
+    
+      <category term="贪心算法" scheme="http://yoursite.com/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>二分法变体</title>
@@ -107,9 +168,9 @@
     
     </summary>
     
-      <category term="链表" scheme="http://yoursite.com/categories/%E9%93%BE%E8%A1%A8/"/>
-    
       <category term="数组" scheme="http://yoursite.com/categories/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="链表" scheme="http://yoursite.com/categories/%E9%93%BE%E8%A1%A8/"/>
     
     
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
