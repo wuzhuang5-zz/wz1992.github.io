@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-17T02:49:52.561Z</updated>
+  <updated>2019-01-18T02:31:27.432Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,24 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>two_sum</title>
-    <link href="http://yoursite.com/2019/01/17/two-sum/"/>
-    <id>http://yoursite.com/2019/01/17/two-sum/</id>
-    <published>2019-01-17T02:20:29.000Z</published>
-    <updated>2019-01-17T02:49:52.561Z</updated>
+    <title>检测回文串</title>
+    <link href="http://yoursite.com/2019/01/17/valid-palindrome/"/>
+    <id>http://yoursite.com/2019/01/17/valid-palindrome/</id>
+    <published>2019-01-17T03:58:46.000Z</published>
+    <updated>2019-01-18T02:31:27.432Z</updated>
     
-    <content type="html"><![CDATA[<p>Question:<br>Given an array of integers, find two numbers such that they add up to a specific target<br>number.<br>The function twoSum should return indices of the two numbers such that they add up to<br>the target, where index1 must be less than index2. Please note that your returned answers<br>(both index1 and index2) are not zero-based.You may assume that each input would have exactly one solution.</p><p>O(n) runtime, O(n) space – Hash table: </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] numbers, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;numbers.length-<span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> x = numbers[i];</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(target - x)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(target-x) + <span class="number">1</span>, i + <span class="number">1</span>&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(x, i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No two sum solution"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>Question:<br>Given a string, determine if it is a palindrome, considering only alphanumeric characters<br>and ignoring cases.</p><a id="more"></a><p>For example,<br>“A man, a plan, a canal: Panama” is a palindrome.<br>“race a car” is not a palindrome.<br>Example Questions Candidate Might Ask:<br>Q: What about an empty string? Is it a valid palindrome?<br>A: For the purpose of this problem, we define empty string as valid palindrome. </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>, j = s.length() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i &lt; j) &#123;</span><br><span class="line">        <span class="keyword">while</span>(i &lt; j &amp;&amp; !Character.isLetterOrDigit(s.charAt(i))) &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(i &lt; j &amp;&amp; !Character.isLetterOrDigit(s.charAt(j))) &#123;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(Character.toLowerCase(s.charAt(i)) != Character.toLowerCase(s.charAt(j))) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">        j--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;Question:&lt;br&gt;Given an array of integers, find two numbers such that they add up to a specific target&lt;br&gt;number.&lt;br&gt;The function twoSum sh
-      
+      &lt;p&gt;Question:&lt;br&gt;Given a string, determine if it is a palindrome, considering only alphanumeric characters&lt;br&gt;and ignoring cases.&lt;/p&gt;
     
     </summary>
     
-      <category term="Array/String" scheme="http://yoursite.com/categories/Array-String/"/>
+      <category term="String" scheme="http://yoursite.com/categories/String/"/>
+    
+    
+      <category term="String" scheme="http://yoursite.com/tags/String/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>两数之和</title>
+    <link href="http://yoursite.com/2019/01/17/two-sum/"/>
+    <id>http://yoursite.com/2019/01/17/two-sum/</id>
+    <published>2019-01-17T02:20:29.000Z</published>
+    <updated>2019-01-18T02:08:50.803Z</updated>
+    
+    <content type="html"><![CDATA[<p>Question:<br>Given an array of integers, find two numbers such that they add up to a specific target<br>number.</p><a id="more"></a><p>The function twoSum should return indices of the two numbers such that they add up to<br>the target, where index1 must be less than index2. Please note that your returned answers<br>(both index1 and index2) are not zero-based.You may assume that each input would have exactly one solution.</p><p>O(n) runtime, O(n) space – Hash table: </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] numbers, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;numbers.length-<span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> x = numbers[i];</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(target - x)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;map.get(target-x) + <span class="number">1</span>, i + <span class="number">1</span>&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(x, i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No two sum solution"</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><p>Similar to Question [1. Two Sum], except that the input array is already sorted in<br>ascending order. </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum2(<span class="keyword">int</span>[] numbers, <span class="keyword">int</span> target) &#123;</span><br><span class="line">     <span class="keyword">int</span> i =<span class="number">0</span>, j = numbers.length-<span class="number">1</span>;</span><br><span class="line">     <span class="keyword">while</span>(i&lt;j) &#123;</span><br><span class="line">         <span class="keyword">int</span> sum = numbers[i] + numbers[j];</span><br><span class="line">         <span class="keyword">if</span>(target &gt; sum) &#123;</span><br><span class="line">             i++;</span><br><span class="line">         &#125; <span class="keyword">else</span> <span class="keyword">if</span>(target &lt; sum) &#123;</span><br><span class="line">             j--;</span><br><span class="line">         &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">             <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i+<span class="number">1</span>,j+<span class="number">1</span>&#125;;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No two sum solution"</span>);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Question:&lt;br&gt;Given an array of integers, find two numbers such that they add up to a specific target&lt;br&gt;number.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数组" scheme="http://yoursite.com/categories/%E6%95%B0%E7%BB%84/"/>
     
     
       <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
