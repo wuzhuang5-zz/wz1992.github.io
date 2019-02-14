@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-18T02:31:27.432Z</updated>
+  <updated>2019-01-28T06:39:53.234Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,98 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GeoHash</title>
+    <link href="http://yoursite.com/2019/01/28/GeoHash/"/>
+    <id>http://yoursite.com/2019/01/28/GeoHash/</id>
+    <published>2019-01-28T06:37:48.000Z</published>
+    <updated>2019-01-28T06:39:53.234Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="空间索引" scheme="http://yoursite.com/categories/%E7%A9%BA%E9%97%B4%E7%B4%A2%E5%BC%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>责任链模式</title>
+    <link href="http://yoursite.com/2019/01/28/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2019/01/28/责任链模式/</id>
+    <published>2019-01-28T03:00:03.000Z</published>
+    <updated>2019-01-28T03:00:56.082Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>生产者消费者模型</title>
+    <link href="http://yoursite.com/2019/01/24/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://yoursite.com/2019/01/24/生产者消费者模型/</id>
+    <published>2019-01-24T09:38:49.000Z</published>
+    <updated>2019-01-24T09:38:49.523Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AQS</title>
+    <link href="http://yoursite.com/2019/01/24/AQS/"/>
+    <id>http://yoursite.com/2019/01/24/AQS/</id>
+    <published>2019-01-24T02:43:01.000Z</published>
+    <updated>2019-01-24T03:28:28.595Z</updated>
+    
+    <content type="html"><![CDATA[<p>Provides a framework for implementing blocking locks and related synchronizers (semaphores, events, etc) that rely on wait queues.  This class is designed to be a useful basis for most kinds of synchronizers that rely on a single atomic {@code int} value to represent state.</p><a id="more"></a><h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p>Subclasses must define the protected methods that change this state, and which define what that state means in terms of this object being acquired or released. Given these, the other methods in this class carry out all queuing and blocking mechanics.</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Base of synchronization control for this lock. Subclassed</span></span><br><span class="line"><span class="comment">     * into fair and nonfair versions below. Uses AQS state to</span></span><br><span class="line"><span class="comment">     * represent the number of holds on the lock.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">abstract</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Sync</span> <span class="keyword">extends</span> <span class="title">AbstractQueuedSynchronizer</span> </span>&#123; &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Provides a framework for implementing blocking locks and related synchronizers (semaphores, events, etc) that rely on wait queues.  This class is designed to be a useful basis for most kinds of synchronizers that rely on a single atomic {@code int} value to represent state.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="并发" scheme="http://yoursite.com/categories/%E5%B9%B6%E5%8F%91/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql索引</title>
+    <link href="http://yoursite.com/2019/01/20/mysql%E7%B4%A2%E5%BC%95/"/>
+    <id>http://yoursite.com/2019/01/20/mysql索引/</id>
+    <published>2019-01-20T06:22:35.000Z</published>
+    <updated>2019-01-24T03:16:14.898Z</updated>
+    
+    <content type="html"><![CDATA[<p>索引的本质、各个索引之间的区别及用途</p><a id="more"></a><h3 id="索引的本质"><a href="#索引的本质" class="headerlink" title="索引的本质"></a>索引的本质</h3><p>MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取数据的数据结构。提取句子主干，就可以得到索引的本质：索引是数据结构。</p><p>我们知道，数据库查询是数据库的最主要功能之一。我们都希望查询数据的速度能尽可能的快，因此数据库系统的设计者会从查询算法的角度进行优化。最基本的查询算法当然是顺序查找（linear search），这种复杂度为O(n)的算法在数据量很大时显然是糟糕的，好在计算机科学的发展提供了很多更优秀的查找算法，例如二分查找（binary search）、二叉树查找（binary tree search）等。如果稍微分析一下会发现，每种查找算法都只能应用于特定的数据结构之上，例如二分查找要求被检索数据有序，而二叉树查找只能应用于二叉查找树上，但是数据本身的组织结构不可能完全满足各种数据结构（例如，理论上不可能同时将两列都按顺序进行组织），所以，在数据之外，数据库系统还维护着满足特定查找算法的数据结构，这些数据结构以某种方式引用（指向）数据，这样就可以在这些数据结构上实现高级查找算法。这种数据结构，就是索引。</p><img src="/2019/01/20/mysql索引/btree.jpg"><h3 id="mysql为什么使用B-树"><a href="#mysql为什么使用B-树" class="headerlink" title="mysql为什么使用B+树"></a>mysql为什么使用B+树</h3><p>一般来说，索引本身也很大，不可能全部存储在内存中，因此索引往往以索引文件的形式存储在磁盘上。这样的话，索引查找过程中就要产生磁盘I/O消耗，相对于内存存取，I/O存取的消耗要高几个数量级，所以评价一个数据结构作为索引的优劣最重要的指标就是在查找过程中磁盘I/O操作次数的渐进复杂度。换句话说，索引的结构组织要尽量减少查找过程中磁盘I/O的存取次数。</p><p>B+tree高度低，检索一次最多访问H个结点。数据库系统的设计者巧妙利用了磁盘预读原理，将一个节点的大小设为等于一个页，这样每个节点只需要一次I/O就可以完全载入。为了达到这个目的，在实际实现B+Tree还需要使用如下技巧：</p><p>每次新建节点时，直接申请一个页的空间，这样就保证一个节点物理上也存储在一个页里，加之计算机存储分配都是按页对齐的，就实现了一个node只需一次I/O。</p><h3 id="聚集索引"><a href="#聚集索引" class="headerlink" title="聚集索引"></a>聚集索引</h3><p>聚集索引就是按照每张表的主键构造一颗B+树，同时叶子节点中存放的即为整张表的行记录数据，也将聚集索引的叶子节点称为数据页。每个数据页通过一个双向链表来进行链接，索引数据在逻辑结构上是连续的。</p><p>##### </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;索引的本质、各个索引之间的区别及用途&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>检测回文串</title>
@@ -187,9 +279,9 @@
     
     </summary>
     
-      <category term="数组" scheme="http://yoursite.com/categories/%E6%95%B0%E7%BB%84/"/>
-    
       <category term="链表" scheme="http://yoursite.com/categories/%E9%93%BE%E8%A1%A8/"/>
+    
+      <category term="数组" scheme="http://yoursite.com/categories/%E6%95%B0%E7%BB%84/"/>
     
     
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
